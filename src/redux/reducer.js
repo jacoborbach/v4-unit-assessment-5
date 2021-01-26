@@ -1,4 +1,4 @@
-initialState = {
+const initialState = {
     username: '',
     profile_pic: ''
 }
@@ -16,10 +16,11 @@ export const updateUserData = (user) => {
 export const logout = () => {
     return {
         type: LOGOUT,
+        // payload: {}
     }
 }
 
-export function reducer(state = initialState, action) {
+export default function reducer(state = initialState, action) {
     switch (action.type) {
         case UPDATE_USER:
             return {
